@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         #screen {
-            width: 60%;
+            width: 55%;
             height: 500px;
             border: 2px solid black;
             border-radius: 20px;
@@ -24,37 +24,94 @@
             height: 100px;
             border: 2px solid orange;
         }
+        #screen >div:nth-child(1) >div:nth-child(1) >h1 {
+            margin: 30px 90px;
+            font-family: sans-serif;
+            color: #832729;
+        }
         #screen >div:nth-child(1) >div:nth-child(2){
             width: 100%;
-            height: 100px;
+            height: 130px;
             border: 2px solid orange;
+        }
+        #screen >div:nth-child(1) >div:nth-child(2) >input {
+            width: 70%;
+            height: 40px;
+            margin: 10px 60px;
+            font-size: 17px;
+            /* border: 1px solid gray; */
         }
         #screen >div:nth-child(1) >div:nth-child(3){
             width: 100%;
-            height: 100px;
-            border: 2px solid orange;
+            height: 50px;
+            border: 1px solid orange;
+        }
+        #screen >div:nth-child(1) >div:nth-child(3) {
+            display: flex;
+        }
+        #screen >div:nth-child(1) >div:nth-child(3) >input {
+            width: 20%;
+            height: 20px;
+            margin: 10px 0px 0px 0px;
+            background-color: #832729;
+        }
+        #screen >div:nth-child(1) >div:nth-child(3) >h3 {
+            font-size: 15px;
+            font-weight: lighter;
+            margin: 10px 10px 0px -10px;
+            font-family: sans-serif;
         }
         #screen >div:nth-child(1) >div:nth-child(4){
             width: 100%;
-            height: 100px;
+            height: 50px;
             border: 2px solid orange;
         }
+        #screen >div:nth-child(1) >div:nth-child(4) >h5 {
+            font-family: sans-serif;
+            font-weight: lighter;
+        }
+        #screen >div:nth-child(1) >div:nth-child(4) >h5 >span {
+            color: #832729;
+        }
+        #screen >div:nth-child(1) >div:nth-child(5) {
+            width: 100%;
+            height: 50px;
+            border: 2px solid gold;
+        } 
         #screen >div:nth-child(2) {
             width: 40%;
             height: 500px;
-            border: 2px solid orange;
+            /* border: 2px solid orange; */
+        }
+        #screen >div:nth-child(2) >img {
+            width: 100%;
+            height: 500px;
         }
     </style>
 </head>
 <body>
     <div id="screen">
         <div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
+            <div>
+                <h1>Login Or Signup</h1>
+            </div>
+            <div>
+                <input type="text" placeholder="Enter your Number"/><br>
+                <input type="password" placeholder="Enter your Password"/>
+            </div>
+            <div>
+                <input type="checkbox"/><h3>Remember Me</h3>
+            </div>
+            <div>
+                <h5>By continuing, I agree to  <span>Terms of Use</span> & <span> Policy </span></h5>
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
         </div>
-        <div>2</div>
+        <div>
+            <img src="https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/a174d444-2b49-4ed2-9e28-d29a4e52165d/desktop/7.png?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0T6206GQH590V3000-a174d444-2b49-4ed2-9e28-d29a4e52165d-desktop-o2OWQtw"/>
+        </div>
     </div>
 </body>
 </html>
