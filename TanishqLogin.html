@@ -11,28 +11,30 @@
             height: 500px;
             border: 2px solid black;
             border-radius: 20px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
             display: flex;
             margin: 50px 10px 10px 250px;
         }
         #screen >div:nth-child(1) {
             width: 60%;
             height: 500px;
-            border: 2px solid orange;
+            /* border: 2px solid orange; */
         }
         #screen >div:nth-child(1) >div:nth-child(1){
             width: 100%;
-            height: 100px;
-            border: 2px solid orange;
+            height: 80px;
+            /* border: 2px solid orange; */
         }
         #screen >div:nth-child(1) >div:nth-child(1) >h1 {
-            margin: 30px 90px;
+            margin: 30px 70px;
             font-family: sans-serif;
             color: #832729;
         }
         #screen >div:nth-child(1) >div:nth-child(2){
             width: 100%;
             height: 130px;
-            border: 2px solid orange;
+            /* border: 2px solid orange; */
         }
         #screen >div:nth-child(1) >div:nth-child(2) >input {
             width: 70%;
@@ -44,7 +46,7 @@
         #screen >div:nth-child(1) >div:nth-child(3){
             width: 100%;
             height: 50px;
-            border: 1px solid orange;
+            /* border: 1px solid orange; */
         }
         #screen >div:nth-child(1) >div:nth-child(3) {
             display: flex;
@@ -60,16 +62,17 @@
             font-weight: lighter;
             margin: 10px 10px 0px -10px;
             font-family: sans-serif;
+            color: rgb(73, 70, 70);
         }
         #screen >div:nth-child(1) >div:nth-child(4){
             width: 100%;
             height: 50px;
-            border: 2px solid orange;
+            /* border: 2px solid orange; */
         }
         #screen >div:nth-child(1) >div:nth-child(4) >h5 {
             font-family: sans-serif;
             font-weight: lighter;
-            margin: 10px 0px 50px;
+            margin: 10px 0px 50px 70px;
         }
         #screen >div:nth-child(1) >div:nth-child(4) >h5 >span {
             color: #832729;
@@ -78,10 +81,24 @@
             /* margin: 10px 0px 10px 50px; */
         }
         #screen >div:nth-child(1) >div:nth-child(5) {
-            width: 100%;
+            width: 50%;
             height: 50px;
-            border: 2px solid gold;
+            /* border: 2px solid gold; */
+            margin: 0px 100px;
         } 
+        #screen >div:nth-child(1) >div:nth-child(5) >button {
+            height: 50px;
+            width: 100%;
+            font-size: 20px;
+            background-color: #832729;
+            color: snow;
+            border: none;
+            border-radius: 5px;
+        }
+        #screen >div:nth-child(1) >div:nth-child(5) >button:hover{
+            cursor: pointer;
+            background-color: #661e1f;
+        }
         #screen >div:nth-child(2) {
             width: 40%;
             height: 500px;
@@ -90,6 +107,7 @@
         #screen >div:nth-child(2) >img {
             width: 100%;
             height: 500px;
+            /* border-radius: 0px; */
         }
     </style>
 </head>
@@ -97,10 +115,10 @@
     <div id="screen">
         <div>
             <div>
-                <h1>Login Or Signup</h1>
+                <h1>Login to Continue</h1>
             </div>
             <div>
-                <input type="text" placeholder="Enter your Number"/><br>
+                <input type="text" placeholder="Enter your Email"/><br>
                 <input type="password" placeholder="Enter your Password"/>
             </div>
             <div>
@@ -110,7 +128,7 @@
                 <h5>By continuing, I agree to  <span>Terms of Use</span> & <span> Policy </span></h5>
             </div>
             <div>
-                <button>Submit</button>
+                <button>Login</button>
             </div>
         </div>
         <div>
