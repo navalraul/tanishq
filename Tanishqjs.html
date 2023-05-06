@@ -893,8 +893,8 @@
             divToShowProducts.innerHTML = finalData;
 
         }
-        function redirect(product2) {
-            var singleproduct = JSON.stringify(product2);
+        function redirect(product) {
+            var singleproduct = JSON.stringify(product);
 
             localStorage.setItem("current-product",singleproduct);
             window.location.href = './Singleproduct.html'
