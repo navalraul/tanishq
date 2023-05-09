@@ -28,10 +28,10 @@
             var proImage = document.getElementById("pimage").value;
             var product = {proName,proPrice,proImage};
 
-            var LS =JSON.parse (localStorage.getItem("Products")) || [];
+            var LS =JSON.parse (localStorage.getItem("TanishqProducts")) || [];
             LS.push(product);
 
-            localStorage.setItem("Products",JSON.stringify(LS));
+            localStorage.setItem("TanishqProducts",JSON.stringify(LS));
 
             alert("Product added successfully.")
         }

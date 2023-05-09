@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="singleproduct"></div>
+
+
+
+
+
+    <script>
+        window.onload = function () {
+            var product = JSON.parse(localStorage.getItem("Tanishqcurrent-product"));
+
+            var divToAppendProduct = document.getElementById("singleproduct");
+            var structure = `<div id='singlePro'> <img src='${product.proImage}' /> <br/> <h1>${product.proName}</h1><br/> <p>${product.proPrice}</p><br/> <button onclick='addCart(${JSON.stringify(product)})'>Add to cart</button> </div>`
+            console.log(structure,"here");
+            divToAppendProduct.innerHTML = structure;
+
+        }
+        function addCart() {
+            alert ("Adding to cart..")
+            var currentUser = JSON.parse(localStorage.getItem("TanishqcurrentUser"));
+
+            var userData = JSON.parse(localStorage.getItem("TanishqUsers"));
+            var flagForUser = false;
+            for (var i=0;i< userData.length;i++){
+                if(currentUser.email === userData[i].email){
+                    alert("Got")
+                    if(userData[i].cartProducts == undefined) {
+                        userData[i].cartProducts = [product];
+                    }else {
+                        userData[i].cartProducts.push(product);
+                    }
+                    alert("Product added to cart");
+                    window.location.href = './Cart.html'
+                }
+            }
+            console.log(userData,'userData');
+            localStorage.setItem("TanishqUsers",JSON.stringify(userData))
+        }
+
+    </script>
+</body>
+</html>
