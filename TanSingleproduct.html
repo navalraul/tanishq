@@ -18,7 +18,7 @@
             var product = JSON.parse(localStorage.getItem("Tanishqcurrent-product"));
 
             var divToAppendProduct = document.getElementById("singleproduct");
-            var structure = `<div id='singlePro'> <img src='${product.proImage}' /> <br/> <h1>${product.proName}</h1><br/> <p>${product.proPrice}</p><br/> <button onclick='addCart(${JSON.stringify(product)})'>Add to cart</button> </div>`
+            var structure = `<div onlick  'redirect(${JSON.stringify(product)})' id='singlePro'> <img src='${product.proImage}' /> <br/> <h1>${product.proName}</h1><br/> <p>${product.proPrice}</p><br/> <button onclick='addCart(${JSON.stringify(product)})'>Add to cart</button> </div>`
             console.log(structure,"here");
             divToAppendProduct.innerHTML = structure;
 
