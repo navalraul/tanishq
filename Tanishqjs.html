@@ -892,7 +892,7 @@
             var productsFromLS = JSON.parse(localStorage.getItem("TanishqProducts"));
             for (var i=0;i <productsFromLS.length;i++){
                 // console.log(productsFromLS[i],'productFromLS')
-                finalData += `<div onlick = 'redirect(${JSON.stringify(productsFromLS[i])})' id='singlepro'><img src =${productsFromLS[i].proImage} /><h3>${productsFromLS[i].proName}</h3><p>${productsFromLS[i].proPrice}</p></div>`;
+                finalData += `<div onlick ='redirect(${JSON.stringify(productsFromLS[i])})' id='singlepro'><img src =${productsFromLS[i].proImage} /><h3>${productsFromLS[i].proName}</h3><p>${productsFromLS[i].proPrice}</p></div>`
             }
             console.log(finalData,"finalData here")
             divToShowProducts.innerHTML = finalData;
@@ -921,7 +921,7 @@
 
         function redirect(Tanishqproduct) {
             var singleproduct = JSON.stringify(Tanishqproduct);
-
+            // alert("working")
             localStorage.setItem("Tanishqcurrent-product",singleproduct);
             window.location.href = './TanSingleproduct.html'
         }
